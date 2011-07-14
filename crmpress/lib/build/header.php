@@ -149,7 +149,21 @@ function crmpress_do_site_title() {
 	$link = sprintf( '<a href="%s" title="%s">%s</a>', trailingslashit( home_url() ), esc_attr( get_bloginfo( 'name', 'display' ) ), get_bloginfo( 'name' ) );
 	$tag = is_home() ? 'h1' : 'p';
 	$output = sprintf( '<%s id="logo">%s</%s>', $tag, $link, $tag );
-	echo apply_filters( 'inline_logo_title', $output ); // echo the output of the logo title and allow it to be filtered
+	echo apply_filters( 'crmpress_logo_title', $output ); // echo the output of the logo title and allow it to be filtered
+
+}
+
+add_action( 'crmpress_site_description', 'crmpress_do_site_description' );
+/**
+ *
+ * This function outputs the site description. 
+ *
+ * @since 1.0
+ *
+ */
+function crmpress_do_site_description() {
+
+		echo apply_filters( 'crmpress_description', __( get_bloginfo( 'description' ), 'crmpress' ) );
 
 }
 
@@ -187,9 +201,13 @@ add_action( 'crmpress_header', 'crmpress_do_header' );
  */
 function crmpress_do_header() {
 
-	echo '<div class="title">';
+	echo '<div class="site-title">';
 		do_action( 'crmpress_site_title' );
-	echo '</div><!--end .title-->';
+	echo '</div><!--end .site-title-->';
+	
+	echo '<p class="site-description">';
+		do_action( 'crmpress_site_description' );
+	echo '</p><!--end .site-description-->';
 
 	echo '<div id="navigation">';
 		do_action( 'crmpress_header_nav' );

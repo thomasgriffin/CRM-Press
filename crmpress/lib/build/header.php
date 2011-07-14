@@ -163,7 +163,7 @@ add_action( 'crmpress_site_description', 'crmpress_do_site_description' );
  */
 function crmpress_do_site_description() {
 
-		echo apply_filters( 'crmpress_description', __( get_bloginfo( 'description' ), 'crmpress' ) );
+	echo apply_filters( 'crmpress_description', __( get_bloginfo( 'description' ), 'crmpress' ) );
 
 }
 

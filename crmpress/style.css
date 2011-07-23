@@ -22,4 +22,42 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* :..[ Global Elements ]..: */
 
-body { background: #fff; font-size: 12px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 22px; color: #888; padding: 0; margin: 0 auto; font-weight: normal; }
+body { background: #f7f7f7; font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 22px; color: #555; padding: 0; margin: 0 auto; font-weight: normal; }
+em { font-style: italic; }
+strong { font-weight: bold; }
+p { margin: 0 0 15px; }
+ol, ul { padding: 0 20px; }
+a, a:visited { color: #000; -moz-transition: color .15s linear; -webkit-transition: color .15s linear; -o-transition: color .15s linear; transition: color .15s linear; outline: none; text-decoration: none; }
+a:hover { color: #f26536; }
+blockquote { background: #f5f5f5; padding: 5px 40px 20px; font-style: italic; color: #555; margin-bottom: 15px; }
+code { font-family: Consolas, sans-serif; background: #F0F8FF; color: #555; }
+pre { font-family: Consolas, sans-serif; overflow: auto; padding: 20px; margin-bottom: 15px; background: #F0F8FF; color: #555; }
+abbr { border-bottom: 1px dotted #dadada; cursor: help; }
+table { display: table; width: 100%; margin-bottom: 15px; }
+address { margin-bottom: 15px; font-weight: bold; }
+dl { margin-bottom: 15px; }
+dt { font-weight: bold; }
+dd { margin-left: 15px; }
+.clear { clear: both; }
+
+/* :..[ Container Elements ]..: */
+
+#wrapper { width: 960px; margin: 0 auto; padding: 0; }
+
+/* :..[ Headings ]..: */
+
+h1, h2, h3, h4, h5, h6 { color: #555; clear: both; }
+h1.entry-title, h2.entry-title { margin-bottom: 2px; font-size: 18px; clear: none; }
+h1 { font-size: 18px; margin: 15px 0; }
+h2 { font-size: 16px; margin: 15px 0; }
+h3 { font-size: 14px; margin: 15px 0; }
+h4 { font-size: 13px; margin: 10px 0; }
+h4.comment-number { padding-bottom: 15px; border-bottom: 1px dashed #eaeaea; margin-bottom: 0; clear: none; }
+
+/* :..[ Header ]..: */
+
+#header { width: 100%; height: auto; padding: 25px 0; position: relative; clear: both; overflow: hidden; }
+
+/* :..[ Content ]..: */
+
+#main-content { width: 100%; margin: 25px 0; clear: both; overflow: hidden; background: #fff; }

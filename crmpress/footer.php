@@ -6,3 +6,11 @@
  * If you wish to make customizations, please make a child theme instead.
  *
  */
+
+do_action( 'crmpress_before_footer' );
+do_action( 'crmpress_footer' );
+do_action( 'crmpress_after_footer' );
+do_action( 'crmpress_after_wireframe' );
+?>
+
+</html>

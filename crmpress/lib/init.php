@@ -7,7 +7,7 @@
  *
  */
 
-add_action( 'init', 'crmpress_constants' );
+add_action( 'crmpress_init', 'crmpress_constants' );
 /**
  *
  * This function adds all the constants that can be used for the CRM Press framework.
@@ -25,6 +25,7 @@ function crmpress_constants() {
 	define( 'CRMPRESS_ADMIN_DIR', CRMPRESS_LIB_DIR . '/admin' );
 	define( 'CRMPRESS_BUILD_DIR', CRMPRESS_LIB_DIR . '/build' );
 	define( 'CRMPRESS_CLASSES_DIR', CRMPRESS_LIB_DIR . '/classes' );
+	define( 'CRMPRESS_METABOX_DIR', CRMPRESS_CLASSES_DIR . '/metabox' );
 	define( 'CRMPRESS_CSS_DIR', CRMPRESS_LIB_DIR . '/css' );
 	define( 'CRMPRESS_FUNCTIONS_DIR', CRMPRESS_LIB_DIR . '/functions' );
 	define( 'CRMPRESS_JS_DIR', CRMPRESS_LIB_DIR . '/js' );
@@ -39,11 +40,14 @@ function crmpress_constants() {
 	define( 'CRMPRESS_ADMIN_URL', CRMPRESS_LIB_URL . '/admin' );
 	define( 'CRMPRESS_BUILD_URL', CRMPRESS_LIB_URL . '/build' );
 	define( 'CRMPRESS_CLASSES_URL', CRMPRESS_LIB_URL . '/classes' );
+	define( 'CRMPRESS_METABOX_URL', CRMPRESS_CLASSES_URL . '/metabox' );
 	define( 'CRMPRESS_CSS_URL', CRMPRESS_LIB_URL . '/css' );
 	define( 'CRMPRESS_FUNCTIONS_URL', CRMPRESS_LIB_URL . '/functions' );
 	define( 'CRMPRESS_JS_URL', CRMPRESS_LIB_URL . '/js' );
 	define( 'CRMPRESS_RESOURCES_URL', CRMPRESS_LIB_URL . '/resources' );
 	define( 'CRMPRESS_WIDGETS_URL', CRMPRESS_LIB_URL . '/widgets' );
+	
+}
 	
 add_action( 'crmpress_init', 'crmpress_mobilize_framework' );
 /**
@@ -59,10 +63,14 @@ add_action( 'crmpress_init', 'crmpress_mobilize_framework' );
  */
 function crmpress_mobilize_framework() {
 
-do_action( 'crmpress_pre_framework' );
+	do_action( 'crmpress_pre_framework' );
 
 	// Load the framework
-	require_once( CRMPRESS_LIB_DIR . '/theme.php' );
+	load_template( CRMPRESS_LIB_DIR . '/theme.php' );
+	
+	// Load classes
+	load_template( CRMPRESS_METABOX_DIR . '/example-functions.php' );
+	load_template( CRMPRESS_METABOX_DIR . '/init.php' );
 	
 	// Load functions
 
@@ -71,8 +79,25 @@ do_action( 'crmpress_pre_framework' );
 	// Load javascript
 	
 	// Load build
+	load_template( CRMPRESS_BUILD_DIR . '/header.php' );
+	load_template( CRMPRESS_BUILD_DIR . '/content.php' );
+	load_template( CRMPRESS_BUILD_DIR . '/post.php' );
+	load_template( CRMPRESS_BUILD_DIR . '/home.php' );
+	load_template( CRMPRESS_BUILD_DIR . '/footer.php' );
 	
-	// Load our resources
+	// Load resources
+	
+	// Load widgets
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-active-projects.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-activity-graph.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-forwarded.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-inquiry-result.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-inquiry.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-old-prospects.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-other-stats.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-poc.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-project-sources.php' );
+	load_template( CRMPRESS_WIDGETS_DIR . '/widget-referral.php' );
 
 }
 

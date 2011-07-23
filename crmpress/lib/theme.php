@@ -8,6 +8,8 @@
  */
 
 function crmpress() {
+	
+	global $prefix; // Add our global variable here so we don't have to call it anywhere else in our theme :)
 
 	get_header();
 

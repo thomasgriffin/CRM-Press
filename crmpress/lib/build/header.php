@@ -111,11 +111,11 @@ function crmpress_structure_start() {
 	?>
 	<body <?php body_class(); ?>>
 	<?php
-	echo '<div id="wrapper">';
+	echo '<section id="wrapper">'; // HTML 5 section tag
 
 }
 
-add_action( 'crmpress_header', 'crmpress_header_structure_start', 5 );
+add_action( 'crmpress_header', 'crmpress_header_structure_start', 3 );
 /**
  *
  * This function outputs the beginning structure of the CRM Press header.
@@ -127,7 +127,7 @@ add_action( 'crmpress_header', 'crmpress_header_structure_start', 5 );
  */
 function crmpress_header_structure_start() {
 
-	echo '<div id="header">';
+	echo '<header id="header">'; // HTML 5 header tag
 	echo '<div class="wrap">';
 
 }
@@ -163,7 +163,7 @@ add_action( 'crmpress_site_description', 'crmpress_do_site_description' );
  */
 function crmpress_do_site_description() {
 
-	echo apply_filters( 'crmpress_description', __( get_bloginfo( 'description' ), 'crmpress' ) );
+		echo apply_filters( 'crmpress_description', __( get_bloginfo( 'description' ), 'crmpress' ) );
 
 }
 
@@ -178,7 +178,7 @@ add_action( 'crmpress_header_nav', 'crmpress_do_header_nav' );
 function crmpress_do_header_nav() {
 
 	// Create the primary nav menu
-	$crmpress_primary_nav = wp_nav_menu( array( 'theme_location' => 'primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header', 'echo' => 'false' ) );
+	$crmpress_primary_nav = wp_nav_menu( array( 'theme_location' => 'primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header', 'echo' => 'false', 'fallback_cb' => 'crmpress_fallback_primary_nav' ) );
 						
 	// Display the primary nav menu only if it is set
 	if ( $crmpress_primary_nav ) {
@@ -209,13 +209,13 @@ function crmpress_do_header() {
 		do_action( 'crmpress_site_description' );
 	echo '</p><!--end .site-description-->';
 
-	echo '<div id="navigation">';
+	echo '<nav id="navigation">'; // HTML 5 nav tag
 		do_action( 'crmpress_header_nav' );
-	echo '</div><!--end #navigation-->';
+	echo '</nav><!--end #navigation-->'; // HTML 5 nav tag
 
 }
 
-add_action( 'crmpress_header', 'crmpress_header_structure_end', 15 );
+add_action( 'crmpress_header', 'crmpress_header_structure_end', 20 );
 /**
  *
  * This function outputs the ending structure of the CRM Press header.
@@ -228,6 +228,6 @@ add_action( 'crmpress_header', 'crmpress_header_structure_end', 15 );
 function crmpress_header_structure_end() {
 
 	echo '</div><!--end #header .wrap-->';
-	echo '</div><!--end #header-->';
+	echo '</header><!--end #header-->'; // HTML 5 header tag
 
 }

@@ -69,7 +69,7 @@ function crmpress_mobilize_framework() {
 	load_template( CRMPRESS_LIB_DIR . '/theme.php' );
 	
 	// Load classes
-	load_template( CRMPRESS_METABOX_DIR . '/example-functions.php' );
+	load_template( CRMPRESS_METABOX_DIR . '/metabox-setup.php' );
 	load_template( CRMPRESS_METABOX_DIR . '/init.php' );
 	
 	// Load functions

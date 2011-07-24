@@ -73,10 +73,18 @@ function crmpress_mobilize_framework() {
 	load_template( CRMPRESS_METABOX_DIR . '/init.php' );
 	
 	// Load functions
+	load_template( CRMPRESS_FUNCTIONS_DIR . '/register-nav.php' );
+	load_template( CRMPRESS_FUNCTIONS_DIR . '/register-sidebar.php' );
+	load_template( CRMPRESS_FUNCTIONS_DIR . '/register-taxonomies.php' );
 
 	// Load admin structure
+	load_template( CRMPRESS_ADMIN_DIR . '/menu-labelling.php' );
+	load_template( CRMPRESS_ADMIN_DIR . '/dashboard.php' );
+	load_template( CRMPRESS_ADMIN_DIR . '/removals.php' );
+	load_template( CRMPRESS_ADMIN_DIR . '/postscreen.php' );
 	
 	// Load javascript
+	load_template( CRMPRESS_JS_DIR . '/mobilize-js.php' );
 	
 	// Load build
 	load_template( CRMPRESS_BUILD_DIR . '/header.php' );
@@ -86,6 +94,10 @@ function crmpress_mobilize_framework() {
 	load_template( CRMPRESS_BUILD_DIR . '/footer.php' );
 	
 	// Load resources
+	load_template( CRMPRESS_RESOURCES_DIR . '/notes.php' );
+	load_template( CRMPRESS_RESOURCES_DIR . '/file-type-uploads.php' );
+	load_template( CRMPRESS_RESOURCES_DIR . '/icon-dir.php' );
+	load_template( CRMPRESS_RESOURCES_DIR . '/core-functions.php' );
 	
 	// Load widgets
 	load_template( CRMPRESS_WIDGETS_DIR . '/widget-active-projects.php' );
@@ -111,6 +123,7 @@ add_action( 'crmpress_init', 'crmpress_theme_support' );
  */
 function crmpress_theme_support() {
 
+	add_theme_support( 'post-thumbnails' );
 	add_editor_style();
 
 }

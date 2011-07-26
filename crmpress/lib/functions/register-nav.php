@@ -24,7 +24,10 @@ function crmpress_fallback_primary_nav() {
 
 	echo '<ul id="menu-primary-navigation" class="menu">';
 		echo '<li>';
-			printf( __( '<a href="%s" title="<?php esc_attr( the_title() ); ?>">Home</a>', 'inline' ), trailingslashit( home_url() ) );
+			printf( __( '<a href="%1$s">Home</a>', 'crmpress' ), trailingslashit( home_url() ) );
+		echo '</li>';
+		echo '<li>';
+			printf( __( '<a href="%1$s">Add New Contact</a>', 'crmpress' ), admin_url( 'post-new.php' ) );
 		echo '</li>';
 	echo '</ul>';
 

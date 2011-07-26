@@ -34,9 +34,9 @@ class Old_Prospects_Widget extends WP_Widget {
 				if ($post->post_date > date('Y-m-d', strtotime('-10 days'))) continue; ?>
 				<li><a href="<?php the_permalink();?>"><?php the_title(); ?></a>, <?php the_date();?> <?php edit_post_link('Edit', '(', ')');?>
 				<?php $status = get_custom_field($prefix.'status_summary'); if ($status) echo '<br /><strong>Status:</strong> '.$status; ?>
-				<br />Source: <?php $sources = get_the_terms( $post->ID, 'sources', '', ', ', '' ); $list = ''; if ($sources) { foreach ($sources as $data) $list .= $data->name.', '; echo $list; }
-				$email = get_custom_field($prefix.'client_email'); if ($email) echo 'Email: '.$email;
-				$phone = get_custom_field($prefix.'client_phone'); if ($phone) echo 'Phone: '.$phone;
+				<br /><strong>Source:</strong> <?php $sources = get_the_terms( $post->ID, 'sources', '', ', ', '' ); $list = ''; if ($sources) { foreach ($sources as $data) $list .= $data->name.', '; echo $list; } echo '<br />';
+				$email = get_custom_field($prefix.'client_email'); if ($email) echo '<strong>Email:</strong> '.$email; echo '<br />';
+				$phone = get_custom_field($prefix.'client_phone'); if ($phone) echo '<strong>Phone:</strong> '.$phone; echo '<br />';
 				?>
 				</li>
 				<?php

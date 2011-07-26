@@ -54,6 +54,8 @@ add_action( 'crmpress_content', 'crmpress_do_content' );
 function crmpress_do_content() {
 
 if ( have_posts() ) : while ( have_posts() ) : the_post(); // Begin our content loop
+	
+	global $post, $prefix;
 
 	do_action( 'crmpress_before_post' ); ?>
 	
@@ -109,5 +111,6 @@ function crmpress_content_structure_end() {
 		
 	echo '</div><!--end #main-content .wrap-->';
 	echo '</div><!--end #main-content-->';
+	echo '<div class="content-shadow"></div><!-- end .content-shadow -->';
 
 }

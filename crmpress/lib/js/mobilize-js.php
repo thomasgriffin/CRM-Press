@@ -24,3 +24,18 @@ function crmpress_load_jquery() {
 	}
 	
 }
+
+add_action( 'init', 'crmpress_load_includes_script' );
+/**
+ *
+ * This function loads the default JavaScript file for CRM Press.
+ *
+ * @since 1.0
+ *
+ */
+function crmpress_load_includes_script() {
+
+	wp_register_script( 'crmpress_includes', CRMPRESS_JS_URL . '/includes.js', array( 'jquery' ), 1.0, true );
+	wp_enqueue_script( 'crmpress_includes' );
+
+}

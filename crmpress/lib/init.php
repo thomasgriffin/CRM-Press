@@ -24,8 +24,7 @@ function crmpress_constants() {
 	define( 'CRMPRESS_LIB_DIR', PARENT_DIR . '/lib' );
 	define( 'CRMPRESS_ADMIN_DIR', CRMPRESS_LIB_DIR . '/admin' );
 	define( 'CRMPRESS_BUILD_DIR', CRMPRESS_LIB_DIR . '/build' );
-	define( 'CRMPRESS_CLASSES_DIR', CRMPRESS_LIB_DIR . '/classes' );
-	define( 'CRMPRESS_METABOX_DIR', CRMPRESS_CLASSES_DIR . '/metabox' );
+	define( 'CRMPRESS_METABOX_DIR', CRMPRESS_LIB_DIR . '/metabox' );
 	define( 'CRMPRESS_CSS_DIR', CRMPRESS_LIB_DIR . '/css' );
 	define( 'CRMPRESS_FUNCTIONS_DIR', CRMPRESS_LIB_DIR . '/functions' );
 	define( 'CRMPRESS_JS_DIR', CRMPRESS_LIB_DIR . '/js' );
@@ -39,8 +38,7 @@ function crmpress_constants() {
 	define( 'CRMPRESS_LIB_URL', PARENT_URL . '/lib' );
 	define( 'CRMPRESS_ADMIN_URL', CRMPRESS_LIB_URL . '/admin' );
 	define( 'CRMPRESS_BUILD_URL', CRMPRESS_LIB_URL . '/build' );
-	define( 'CRMPRESS_CLASSES_URL', CRMPRESS_LIB_URL . '/classes' );
-	define( 'CRMPRESS_METABOX_URL', CRMPRESS_CLASSES_URL . '/metabox' );
+	define( 'CRMPRESS_METABOX_URL', CRMPRESS_LIB_URL . '/metabox' );
 	define( 'CRMPRESS_CSS_URL', CRMPRESS_LIB_URL . '/css' );
 	define( 'CRMPRESS_FUNCTIONS_URL', CRMPRESS_LIB_URL . '/functions' );
 	define( 'CRMPRESS_JS_URL', CRMPRESS_LIB_URL . '/js' );

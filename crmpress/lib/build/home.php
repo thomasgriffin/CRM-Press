@@ -56,23 +56,26 @@ function crmpress_home_loop() {
 function crmpress_home_widgets() {
 
 	?>
-	<div class="home-row">
+	<ul class="home-row first">
 	<?php if ( !dynamic_sidebar( 'home-row-1' ) ): ?>
 		<?php _e( 'Go to Appearances > Widgets > Home Row 1 and add some widgets. You may add up to three widgets in this sidebar.', 'crmpress' ); ?>
 	<?php endif; ?>
-	</div>
+	</ul><!-- end .home-row -->
+	<div class="clear"></div>
 					
-	<div class="home-row">
+	<ul class="home-row">
 	<?php if ( !dynamic_sidebar( 'home-row-2' ) ): ?>
 		<?php _e( 'Go to Appearances > Widgets > Home Row 2 and add some widgets. You may add up to three widgets in this sidebar.', 'crmpress' ); ?>
 	<?php endif; ?>
-	</div>
+	</ul><!-- end .home-row -->
+	<div class="clear"></div>
 					
-	<div class="home-row last">
+	<ul class="home-row last">
 	<?php if ( !dynamic_sidebar( 'home-row-3' ) ): ?>
 		<?php _e( 'Go to Appearances > Widgets > Home Row 3 and add some widgets. You may add up to three widgets in this sidebar.', 'crmpress' ); ?>
 	<?php endif; ?>
-	</div>
+	</ul><!-- end .home-row -->
+	<div class="clear"></div>
 	<?php	
 
 }

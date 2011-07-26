@@ -32,10 +32,10 @@ class Active_Projects_Widget extends WP_Widget {
 			while ($active->have_posts()): $active->the_post(); global $post; $count++;?>
 				<li><a href="<?php the_permalink();?>"><?php the_title();?></a> <?php edit_post_link('Edit', '(', ')');?><br /> 
 				<?php $status = get_custom_field($prefix.'status_summary'); if ($status) echo '<strong>Status:</strong> '.$status.'<br />';
-				$started = get_custom_field($prefix.'start_date'); if ($started) echo '<strong>Started:</strong> '.date('F j, Y', strtotime($started)).','; 
+				$started = get_custom_field($prefix.'start_date'); if ($started) echo '<strong>Started:</strong> '.date('F j, Y', strtotime($started)).'<br />'; 
 				$revenue = get_custom_field($prefix.'revenue');
 				$expense = get_custom_field($prefix.'expense');
-				if ($revenue) echo 'Budget: $' . (number_format($revenue - $expense)) . '</li>';
+				if ($revenue) echo '<strong>Budget:</strong> $' . (number_format($revenue - $expense)) . '</li>';
 			endwhile; 
 			if ($count < 1) echo "<p>Don't worry. I'm sure a few of those prospects listed in the left column will make the jump over here soon.</p><p>Or, maybe you haven't set up your categories yet. This area shows posts in the Active Projects category, so create a category with a slug 'active-project'.</p>";
 			echo '</ol>';

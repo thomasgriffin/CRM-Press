@@ -41,8 +41,9 @@ add_action( 'admin_menu', 'crmpress_remove_submenus' );
  */
 function crmpress_remove_submenus() {
 
-	global $submenu;
+	global $submenu, $menu;
 	unset( $submenu['edit.php'][16] );
+	unset( $menu[59] ); // remove the extra menu separator
 	  
 }
 

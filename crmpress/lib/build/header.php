@@ -203,11 +203,10 @@ function crmpress_do_header() {
 
 	echo '<div class="site-title">';
 		do_action( 'crmpress_site_title' );
+		echo '<p class="site-description">';
+			do_action( 'crmpress_site_description' );
+		echo '</p><!--end .site-description-->';
 	echo '</div><!--end .site-title-->';
-	
-	echo '<p class="site-description">';
-		do_action( 'crmpress_site_description' );
-	echo '</p><!--end .site-description-->';
 
 	echo '<nav id="navigation">'; // HTML 5 nav tag
 		do_action( 'crmpress_header_nav' );

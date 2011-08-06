@@ -35,7 +35,7 @@ add_action( 'crmpress_credits', 'crmpress_do_credits' );
 function crmpress_do_credits() {
 
 	?>
-	<p class="credit"><a href="http://crmpress.com" target="_blank"><?php _e( 'Powered by CRM Press', 'crmpress' ); ?></a></p>
+	<p class="credit"><a href="http://www.billerickson.net/wordpress-genesis-crm/" target="_blank"><?php _e( 'Powered by CRM Press', 'crmpress' ); ?></a></p>
 	<?php
 
 }

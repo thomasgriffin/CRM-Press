@@ -25,6 +25,7 @@ class Referral_Widget extends WP_Widget {
 		echo $before_title.'Other Referrals'.$after_title;
 
 		global $referrals;
+		
 		if (!empty($referrals)) {
 		echo '<ul>';
 		$others = array_count_values($referrals);

@@ -95,7 +95,6 @@ function crmpress_mobilize_framework() {
 	load_template( CRMPRESS_RESOURCES_DIR . '/notes.php' );
 	load_template( CRMPRESS_RESOURCES_DIR . '/file-type-uploads.php' );
 	load_template( CRMPRESS_RESOURCES_DIR . '/icon-dir.php' );
-	load_template( CRMPRESS_RESOURCES_DIR . '/core-functions.php' );
 	
 	// Load widgets
 	load_template( CRMPRESS_WIDGETS_DIR . '/widget-active-projects.php' );
@@ -109,6 +108,9 @@ function crmpress_mobilize_framework() {
 	load_template( CRMPRESS_WIDGETS_DIR . '/widget-project-sources.php' );
 	load_template( CRMPRESS_WIDGETS_DIR . '/widget-referral.php' );
 
+	// Load helper functions
+	load_template( CRMPRESS_RESOURCES_DIR . '/core-functions.php' );
+	
 }
 
 add_action( 'crmpress_init', 'crmpress_theme_support' );

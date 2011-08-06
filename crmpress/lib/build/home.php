@@ -28,11 +28,13 @@ function crmpress_home_loop() {
 	);
 	
 	$all = new WP_Query( apply_filters( 'crmpress_home_loop_args', __( $args, 'crmpress' ) ) );
+	global $prefix;
 	
 	do_action( 'crmpress_pre_stat_loop' );
 	
+	global $total;
 	$total = 0;
-	while ( $all->have_posts() ) : $all->the_post();
+	while ( $all->have_posts() ) : $all->the_post(); global $post, $meta, $prefix;
 		$meta = get_post_custom( $post->ID );
 		$total++;
 		do_action( 'crmpress_stat_loop' );

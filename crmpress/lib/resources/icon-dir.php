@@ -16,6 +16,6 @@ add_filter( 'icon_dir_uri', 'crmpress_icon_uri' );
  */
 function crmpress_icon_uri( $icon_dir ) {
 
-	return CRMPRESS_ADMIN_DIR . '/images';
+	return CRMPRESS_ADMIN_URL . '/images';
 	 
 }

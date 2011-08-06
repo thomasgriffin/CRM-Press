@@ -1,8 +1,8 @@
 <?php
 /* Project Sources Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_project_sources_load_widgets' );
-function crm_project_sources_load_widgets() {
+add_action( 'widgets_init', 'crmpress_project_sources_load_widgets' );
+function crmpress_project_sources_load_widgets() {
 	register_widget( 'Project_Sources_Widget' );
 }
 
@@ -39,8 +39,8 @@ class Project_Sources_Widget extends WP_Widget {
 	
 }
 
-add_action('crm_stat_loop', 'crm_project_sources_loop');
-function crm_project_sources_loop() {
+add_action('crmpress_stat_loop', 'crmpress_project_sources_loop');
+function crmpress_project_sources_loop() {
 	global $post, $meta, $projects, $prefix;
 	$sources_of_projects = get_the_terms( $post->ID, 'sources', '', ', ', '' );
 	if(isset($meta[$prefix.'project_status'][0]) && $meta[$prefix.'project_status'][0] == 'quoted and won') { 

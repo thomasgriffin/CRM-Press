@@ -1,8 +1,8 @@
 <?php
 /* Forwarded Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_forwarded_load_widgets' );
-function crm_forwarded_load_widgets() {
+add_action( 'widgets_init', 'crmpress_forwarded_load_widgets' );
+function crmpress_forwarded_load_widgets() {
 	register_widget( 'Forwarded_Widget' );
 }
 
@@ -40,8 +40,8 @@ class Forwarded_Widget extends WP_Widget {
 }
 
 
-add_action('crm_stat_loop', 'crm_forwarded_loop');
-function crm_forwarded_loop() {
+add_action('crmpress_stat_loop', 'crmpress_forwarded_loop');
+function crmpress_forwarded_loop() {
 	global $post, $meta, $forwarded_away, $prefix;
 	if(isset($meta[$prefix.'project_status'][0])) { 
 		$status = $meta[$prefix.'project_status'][0];

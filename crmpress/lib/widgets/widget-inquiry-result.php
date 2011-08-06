@@ -1,8 +1,8 @@
 <?php
 /* POC Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_inquiry_result_load_widgets' );
-function crm_inquiry_result_load_widgets() {
+add_action( 'widgets_init', 'crmpress_inquiry_result_load_widgets' );
+function crmpress_inquiry_result_load_widgets() {
 	register_widget( 'Inquiry_Result_Widget' );
 }
 
@@ -39,8 +39,8 @@ class Inquiry_Result_Widget extends WP_Widget {
 	
 }
 
-add_action('crm_stat_loop', 'crm_inquiry_result_loop');
-function crm_inquiry_result_loop() {
+add_action('crmpress_stat_loop', 'crmpress_inquiry_result_loop');
+function crmpress_inquiry_result_loop() {
 	global $project_result, $post, $meta, $prefix;
 	if(isset($meta[$prefix.'project_status'][0])) 	$project_result[] = $meta[$prefix.'project_status'][0];
 }

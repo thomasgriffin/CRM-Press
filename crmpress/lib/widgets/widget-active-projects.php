@@ -1,8 +1,8 @@
 <?php
 /* Active Projects Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_active_projects_load_widgets' );
-function crm_active_projects_load_widgets() {
+add_action( 'widgets_init', 'crmpress_active_projects_load_widgets' );
+function crmpress_active_projects_load_widgets() {
 	register_widget( 'Active_Projects_Widget' );
 }
 

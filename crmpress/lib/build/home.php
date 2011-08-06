@@ -32,11 +32,11 @@ function crmpress_home_loop() {
 	
 	do_action( 'crmpress_pre_stat_loop' );
 	
-	global $total, $project_result, $forwarded_away, $projects, $referrals;
+	global $total;
 	$total = 0;
 	while ( $all->have_posts() ) : $all->the_post(); global $post, $meta, $prefix;
 		$meta = get_post_custom( $post->ID );
-		$total++; $referrals++; $projects++;
+		$total++;
 		do_action( 'crmpress_stat_loop' );
 	endwhile;
 	

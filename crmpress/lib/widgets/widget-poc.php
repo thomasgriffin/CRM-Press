@@ -1,8 +1,8 @@
 <?php
 /* POC Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_poc_load_widgets' );
-function crm_poc_load_widgets() {
+add_action( 'widgets_init', 'crmpress_poc_load_widgets' );
+function crmpress_poc_load_widgets() {
 	register_widget( 'POC_Widget' );
 }
 

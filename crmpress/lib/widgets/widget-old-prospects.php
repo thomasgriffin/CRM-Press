@@ -1,8 +1,8 @@
 <?php
 /* Old Prospects Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_prospects_load_widgets' );
-function crm_prospects_load_widgets() {
+add_action( 'widgets_init', 'crmpress_prospects_load_widgets' );
+function crmpress_prospects_load_widgets() {
 	register_widget( 'Old_Prospects_Widget' );
 }
 

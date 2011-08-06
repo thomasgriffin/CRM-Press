@@ -5,8 +5,8 @@
 
 
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_activity_graph_load_widgets' );
-function crm_activity_graph_load_widgets() {
+add_action( 'widgets_init', 'crmpress_activity_graph_load_widgets' );
+function crmpress_activity_graph_load_widgets() {
 	register_widget( 'Activity_Graph_Widget' );
 }
 

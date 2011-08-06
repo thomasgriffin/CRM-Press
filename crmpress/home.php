@@ -7,8 +7,6 @@
  *
  */
 
-global $post, $prefix, $total, $project_result, $forwarded_away, $projects, $referrals;
-
 remove_action( 'crmpress_content', 'crmpress_do_content' );
 add_action( 'crmpress_content', 'crmpress_home_loop' );
 add_action( 'crmpress_content', 'crmpress_home_widgets' );

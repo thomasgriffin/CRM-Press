@@ -1,8 +1,8 @@
 <?php
 /* Referral Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_referral_load_widgets' );
-function crm_referral_load_widgets() {
+add_action( 'widgets_init', 'crmpress_referral_load_widgets' );
+function crmpress_referral_load_widgets() {
 	register_widget( 'Referral_Widget' );
 }
 
@@ -39,8 +39,8 @@ class Referral_Widget extends WP_Widget {
 	
 }
 
-add_action('crm_stat_loop', 'crm_referral_loop');
-function crm_referral_loop() {
+add_action('crmpress_stat_loop', 'crmpress_referral_loop');
+function crmpress_referral_loop() {
 	global $meta, $referrals, $prefix;
 	if (isset($meta[$prefix.'other_referral'][0])) $referrals[] = $meta[$prefix.'other_referral'][0];
 

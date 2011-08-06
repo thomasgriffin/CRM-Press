@@ -1,8 +1,8 @@
 <?php
 /* Other Stats Widget */
 /** Add our function to the widgets_init hook. **/
-add_action( 'widgets_init', 'crm_other_stats_load_widgets' );
-function crm_other_stats_load_widgets() {
+add_action( 'widgets_init', 'crmpress_other_stats_load_widgets' );
+function crmpress_other_stats_load_widgets() {
 	register_widget( 'Other_Stats_Widget' );
 }
 
@@ -38,8 +38,8 @@ class Other_Stats_Widget extends WP_Widget {
 	
 }
 
-add_action('crm_stat_loop', 'crm_other_stats_loop');
-function crm_other_stats_loop() {
+add_action('crmpress_stat_loop', 'crmpress_other_stats_loop');
+function crmpress_other_stats_loop() {
 	global $post, $active_projects, $thirty_days, $seven_days;
 	if (in_category('active-project')) $active_projects++;
 	if ($post->post_date > date('Y-m-d', strtotime('-30 days'))) $thirty_days++;

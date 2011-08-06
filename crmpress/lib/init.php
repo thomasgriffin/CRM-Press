@@ -70,6 +70,9 @@ function crmpress_mobilize_framework() {
 	load_template( CRMPRESS_METABOX_DIR . '/metabox-setup.php' );
 	load_template( CRMPRESS_METABOX_DIR . '/init.php' );
 	
+	// Load CSS
+	load_template( CRMPRESS_CSS_DIR . '/mobilize-css.php' );
+	
 	// Load functions
 	load_template( CRMPRESS_FUNCTIONS_DIR . '/register-nav.php' );
 	load_template( CRMPRESS_FUNCTIONS_DIR . '/register-sidebar.php' );
@@ -80,6 +83,7 @@ function crmpress_mobilize_framework() {
 	load_template( CRMPRESS_ADMIN_DIR . '/dashboard.php' );
 	load_template( CRMPRESS_ADMIN_DIR . '/removals.php' );
 	load_template( CRMPRESS_ADMIN_DIR . '/postscreen.php' );
+	load_template( CRMPRESS_ADMIN_DIR . '/default-categories.php' );
 	
 	// Load javascript
 	load_template( CRMPRESS_JS_DIR . '/mobilize-js.php' );

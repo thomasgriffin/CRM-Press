@@ -7,6 +7,26 @@
  *
  */
 
+add_action( 'wp_dashboard_setup', 'crmpress_one_column_default' );
+/**
+ *
+ * This function sets the dashboard column to 1 instead of the default 2 columns.
+ *
+ * @since 1.1
+ *
+ */
+function crmpress_one_column_default() {
+
+	global $user_ID, $pagenow;
+	$options = get_user_option( 'screen_layout_dashboard', $user_ID );
+
+	if ( $pagenow == 'index.php' && $options != 1 )
+		update_user_option( $user_ID, 'screen_layout_dashboard', 1, true );
+
+}
+
+
+
 add_action( 'admin_menu', 'crmpress_remove_dashboard_boxes' );
 /**
  *
@@ -41,7 +61,7 @@ add_action( 'wp_dashboard_setup', 'crmpress_custom_dashboard_widgets' );
  */
 function crmpress_custom_dashboard_widgets() {
 
-	wp_add_dashboard_widget( 'custom_help_widget', 'CRM Press', 'crmpress_dashboard_help' );
+	wp_add_dashboard_widget( 'custom_help_widget', 'CRM Press', 'crmpress_dashboard_widget' );
 	
 }
 
@@ -52,8 +72,12 @@ function crmpress_custom_dashboard_widgets() {
  * @since 1.0
  *
  */
-function crmpress_dashboard_help() {
+if ( !function_exists( 'crmpress_dashboard_widget' ) ) {
+	function crmpress_dashboard_widget() {
 
-    echo '<p>Welcome to the ' .get_bloginfo( 'name' ). ' dashboard panel</p>';
+		global $post, $prefix;
+
+    	echo '<h2 class="dash-title">' . get_bloginfo( 'name' ) . ' Project Information</h2>';
     
+	}
 }

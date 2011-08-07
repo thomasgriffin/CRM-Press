@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file mobilizes our CSS files.
+ * This file creates our default 'Status' categories.
  *
  * @package CRM Press
  *

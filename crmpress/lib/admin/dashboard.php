@@ -61,7 +61,7 @@ add_action( 'wp_dashboard_setup', 'crmpress_custom_dashboard_widgets' );
  */
 function crmpress_custom_dashboard_widgets() {
 
-	wp_add_dashboard_widget( 'custom_help_widget', 'CRM Press', 'crmpress_dashboard_widget' );
+	wp_add_dashboard_widget( 'crmpress-dashboard-widget', 'CRM Press', 'crmpress_dashboard_widget' );
 	
 }
 
@@ -78,6 +78,8 @@ if ( !function_exists( 'crmpress_dashboard_widget' ) ) {
 		global $post, $prefix;
 
     	echo '<h2 class="dash-title">' . get_bloginfo( 'name' ) . ' Project Information</h2>';
+    	
+    	echo '<p>Soon this widget will house your project information by "Status" category. The update will be pushed out soon!</p>';
     
 	}
 }

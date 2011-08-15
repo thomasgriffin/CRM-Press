@@ -12,6 +12,13 @@ Authors:
 CHANGELOG
 
 ----------
+1.1
+----------
+
+-minor bug fixes
+-added in functionality to the dashboard widget; it is now populated by active/scheduled projects and prospects
+
+----------
 1.0
 ----------
 

@@ -17,10 +17,10 @@ add_action( 'after_setup_theme', 'crmpress_create_default_categories' );
  */
 function crmpress_create_default_categories() {
 
-	if( !term_exists( 'Scheduled Projects', 'category' ) )
-		wp_insert_term( 'Scheduled Projects', 'category' );
-	if( !term_exists( 'Active Projects', 'category' ) )
-		wp_insert_term( 'Active Projects', 'category' );
+	if( !term_exists( 'Scheduled Project', 'category' ) )
+		wp_insert_term( 'Scheduled Project', 'category' );
+	if( !term_exists( 'Active Project', 'category' ) )
+		wp_insert_term( 'Active Project', 'category' );
 	if( !term_exists( 'Closed', 'category' ) )
 		wp_insert_term( 'Closed', 'category' );
 	if( !term_exists( 'Complete', 'category' ) )
@@ -29,7 +29,7 @@ function crmpress_create_default_categories() {
 		wp_insert_term( 'Forwarded Away', 'category' );
 	if( !term_exists( 'Outstanding Quote', 'category' ) )
 		wp_insert_term( 'Outstanding Quote', 'category' );
-	if( !term_exists( 'Prospects', 'category' ) )
-		wp_insert_term( 'Prospects', 'category' );
+	if( !term_exists( 'Prospect', 'category' ) )
+		wp_insert_term( 'Prospect', 'category' );
 	
 }

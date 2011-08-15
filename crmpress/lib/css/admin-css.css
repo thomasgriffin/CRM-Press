@@ -1,2 +1,13 @@
 #crmpress-dashboard-widget { width: 100%; }
-h2.dash-title { text-align: center; }
+#crmpress-dashboard-widget h2.dash-title { text-align: center; margin-bottom: 25px; font-weight: bold; font-size: 28px; }
+#crmpress-dashboard-widget .active-projects { float: left; width: 330px; padding-right: 20px; }
+#crmpress-dashboard-widget .active-projects h2 { color: #0CB636; margin-bottom: 15px; }
+#crmpress-dashboard-widget .active-projects h3, #crmpress-dashboard-widget .scheduled-projects h3, #crmpress-dashboard-widget .prospects h3 { background: transparent; padding-left: 0; cursor: default; margin-bottom: 10px; }
+#crmpress-dashboard-widget .active-projects h3 a, #crmpress-dashboard-widget .scheduled-projects h3 a, #crmpress-dashboard-widget .prospects h3 a { text-decoration: none; }
+#crmpress-dashboard-widget li { line-height: 170%; font-size: 13px; }
+#crmpress-dashboard-widget .scheduled-projects { float: left; width: 330px; padding-right: 20px; }
+#crmpress-dashboard-widget .scheduled-projects h2 { color: #ef980e; margin-bottom: 15px; }
+#crmpress-dashboard-widget .prospects { float: left; width: 330px; }
+#crmpress-dashboard-widget .prospects h2 { color: #ef430e; margin-bottom: 15px; }
+
+
